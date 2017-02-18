@@ -2,8 +2,12 @@
   "name": "advanced-movie-list-api-starter",
   "version": "1.0.0",
   "description": "Starter repository for the ACA advanced movie list api project",
+  "babel": {
+    "presets": ["es2015","stage-0"]
+  },
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec \"eslint src && babel-node src/index\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +27,15 @@
     "mongoose": "^4.8.3",
     "nodemon": "^1.11.0"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-istanbul": "^0.12.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-react": "^6.10.0"
+  }
 }
