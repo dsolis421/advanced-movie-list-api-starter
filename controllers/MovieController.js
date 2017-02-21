@@ -32,7 +32,7 @@ moviesController.create = (request, response, next) => {
 };
 
 moviesController.update = (request, response, next) => {
-  MovieModel.findById(request.params._id)
+  MovieModel.findById(request.params._id).exec()
   .then(movie => {
     // Assigning movie attributes from request or existing movie
     movie.title = request.body.title || movie.title;
