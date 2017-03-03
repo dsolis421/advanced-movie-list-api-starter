@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/movie-list');
 
 app.use(BodyParser.json());
 app.use(MovieRoutes);
-app.use((err, request, response) => response.status(500).send('Request error! ' + err));
+app.use((err, request, response, next) => response.status(500).send('Request error! ' + err));
 
 const PORT = 3001;
 
